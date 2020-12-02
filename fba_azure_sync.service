@@ -1,0 +1,10 @@
+[Unit]
+Description=Forcepoint FBA and Azure users sync
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/var/azure-fba/azure-fba run --config /var/azure-fba/config.yml
+
+[Install]
+WantedBy=multi-user.target
